@@ -8,7 +8,8 @@
     "phase3": "npx ts-node phase3-demo.ts",
     "deploy": "npx ts-node deploy-bot.ts",
     "bot-status": "npx ts-node deploy-bot.ts status",
-    "test-deployment": "npx ts-node test-deployment.ts"
+    "test-deployment": "npx ts-node test-deployment.ts",
+    "simple-bot": "npx ts-node simple-bot.ts"
   },
   "keywords": [],
   "author": "",

@@ -148,10 +148,10 @@ export class LichessBotClient extends EventEmitter {
     private activeGames: Map<string, LichessGameState> = new Map();
     private eventStream: any = null;
     private gameStreams: Map<string, any> = new Map();
-    
+
     constructor(private apiToken: string) {
         super();
-        
+
         this.api = axios.create({
             baseURL: 'https://lichess.org/api',
             headers: {
@@ -160,7 +160,7 @@ export class LichessBotClient extends EventEmitter {
             },
             timeout: 30000
         });
-        
+
         // Set up response interceptors
         this.api.interceptors.response.use(
             (response) => response,
@@ -200,10 +200,10 @@ export class LichessBotClient extends EventEmitter {
             });
 
             this.eventStream = response.data;
-            
+
             this.eventStream.on('data', (chunk: Buffer) => {
                 const lines = chunk.toString().split('\n');
-                
+
                 for (const line of lines) {
                     if (line.trim()) {
                         try {
@@ -229,7 +229,7 @@ export class LichessBotClient extends EventEmitter {
 
             console.log('Event stream started');
             this.emit('streamStarted');
-            
+
         } catch (error) {
             throw new Error(`Failed to start event stream: ${error}`);
         }
@@ -247,7 +247,7 @@ export class LichessBotClient extends EventEmitter {
             this.eventStream.destroy();
             this.eventStream = null;
         }
-        
+
         // Stop all game streams
         this.gameStreams.forEach(stream => stream.destroy());
         this.gameStreams.clear();
@@ -269,12 +269,12 @@ export class LichessBotClient extends EventEmitter {
 
             gameStream.on('data', (chunk: Buffer) => {
                 const lines = chunk.toString().split('\n');
-                
+
                 for (const line of lines) {
                     if (line.trim()) {
                         try {
                             const data = JSON.parse(line);
-                            
+
                             if (data.type === 'gameFull') {
                                 // Initial game state
                                 const gameState: LichessGameState = data;
@@ -311,7 +311,7 @@ export class LichessBotClient extends EventEmitter {
             });
 
             console.log(`Game stream started for ${gameId}`);
-            
+
         } catch (error) {
             throw new Error(`Failed to start game stream for ${gameId}: ${error}`);
         }
@@ -330,7 +330,7 @@ export class LichessBotClient extends EventEmitter {
 
     public async sendGameChat(gameId: string, text: string, room: 'player' | 'spectator' = 'player'): Promise<void> {
         try {
-            await this.api.post(`/bot/game/${gameId}/chat`, 
+            await this.api.post(`/bot/game/${gameId}/chat`,
                 `room=${room}&text=${encodeURIComponent(text)}`,
                 {
                     headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
@@ -462,10 +462,6 @@ export class LichessBotClient extends EventEmitter {
         return this.activeGames.has(gameId);
     }
 
-    public getBotAccount(): BotAccount | null {
-        return this.botAccount;
-    }
-
     public isConnected(): boolean {
         return this.eventStream !== null;
     }
@@ -473,7 +469,7 @@ export class LichessBotClient extends EventEmitter {
     // Challenge Decision Logic
     public shouldAcceptChallenge(challenge: LichessChallenge): { accept: boolean; reason?: string } {
         // Basic challenge acceptance logic - can be customized
-        
+
         // Only accept standard chess
         if (challenge.variant.key !== 'standard') {
             return { accept: false, reason: 'Only standard chess supported' };
@@ -521,16 +517,16 @@ export class LichessBotClient extends EventEmitter {
     public printStatus(): void {
         console.log('\n🤖 LICHESS BOT STATUS');
         console.log('=====================');
-        
+
         if (this.botAccount) {
             console.log(`Bot: ${this.botAccount.username} (${this.botAccount.id})`);
             console.log(`Online: ${this.botAccount.online ? '✅' : '❌'}`);
             console.log(`Currently Playing: ${this.botAccount.playing} games`);
         }
-        
+
         console.log(`Event Stream: ${this.isConnected() ? '✅ Connected' : '❌ Disconnected'}`);
         console.log(`Active Games: ${this.activeGames.size}`);
-        
+
         if (this.activeGames.size > 0) {
             console.log('\nActive Games:');
             this.activeGames.forEach((game, gameId) => {
@@ -543,9 +539,9 @@ export class LichessBotClient extends EventEmitter {
     // Cleanup
     public async disconnect(): Promise<void> {
         console.log('Disconnecting Lichess bot...');
-        
+
         this.stopEventStream();
-        
+
         // Resign active games
         const gameIds = Array.from(this.activeGames.keys());
         for (const gameId of gameIds) {
