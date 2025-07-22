@@ -1,0 +1,138 @@
+{
+  "metadata": {
+    "generatedFrom": "47 games",
+    "maxDepth": 12,
+    "minFrequency": 2,
+    "generatedAt": "2025-07-22T15:28:20.483Z"
+  },
+  "statistics": {
+    "totalPositions": 5,
+    "averageDepth": 1.8,
+    "preferredOpenings": {
+      "white": [],
+      "black": []
+    },
+    "weakOpenings": {
+      "white": [],
+      "black": []
+    }
+  },
+  "positions": {
+    "asWhite": [
+      {
+        "key": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq -",
+        "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+        "moves": [
+          {
+            "move": "d2d4",
+            "san": "d4",
+            "frequency": 24,
+            "winRate": 0.4583333333333333,
+            "performance": 65.83333333333333,
+            "averageOpponentRating": 449.25,
+            "followupMoves": [],
+            "notes": [
+              "Center control",
+              "Part of Indian Defense: West Indian Defense"
+            ]
+          }
+        ],
+        "totalGames": 24,
+        "successRate": 0.4583333333333333,
+        "popularity": 51.06382978723404,
+        "eco": "https://www.chess.com/openings/Dutch-Defense-2.c4"
+      },
+      {
+        "key": "rnbqkbnr/ppp1pppp/8/3p4/3P4/8/PPP1PPPP/RNBQKBNR w KQkq -",
+        "fen": "rnbqkbnr/ppp1pppp/8/3p4/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 2",
+        "moves": [
+          {
+            "move": "c2c4",
+            "san": "c4",
+            "frequency": 4,
+            "winRate": 0.5,
+            "performance": 58,
+            "averageOpponentRating": 355.75,
+            "followupMoves": [],
+            "notes": []
+          },
+          {
+            "move": "e2e3",
+            "san": "e3",
+            "frequency": 3,
+            "winRate": 0.3333333333333333,
+            "performance": 39.33333333333333,
+            "averageOpponentRating": 420.3333333333333,
+            "followupMoves": [],
+            "notes": []
+          }
+        ],
+        "totalGames": 9,
+        "successRate": 0.4444444444444444,
+        "popularity": 19.148936170212767,
+        "eco": "https://www.chess.com/openings/Queens-Gambit-Accepted-Central-Variation-Modern-Defense-4.Be3-Nf6"
+      },
+      {
+        "key": "rnbqkbnr/pppp1ppp/4p3/8/3P4/8/PPP1PPPP/RNBQKBNR w KQkq -",
+        "fen": "rnbqkbnr/pppp1ppp/4p3/8/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 2",
+        "moves": [
+          {
+            "move": "c2c4",
+            "san": "c4",
+            "frequency": 3,
+            "winRate": 0.6666666666666666,
+            "performance": 72.66666666666666,
+            "averageOpponentRating": 342,
+            "followupMoves": [],
+            "notes": []
+          }
+        ],
+        "totalGames": 4,
+        "successRate": 0.75,
+        "popularity": 8.51063829787234,
+        "eco": "https://www.chess.com/openings/Queens-Pawn-Opening-Horwitz-Defense-2.c4"
+      },
+      {
+        "key": "rnbqkbnr/pppp1ppp/8/4p3/3P4/8/PPP1PPPP/RNBQKBNR w KQkq -",
+        "fen": "rnbqkbnr/pppp1ppp/8/4p3/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 0 2",
+        "moves": [
+          {
+            "move": "e2e3",
+            "san": "e3",
+            "frequency": 2,
+            "winRate": 0.5,
+            "performance": 54,
+            "averageOpponentRating": 456,
+            "followupMoves": [],
+            "notes": []
+          }
+        ],
+        "totalGames": 2,
+        "successRate": 0.5,
+        "popularity": 4.25531914893617,
+        "eco": "https://www.chess.com/openings/Englund-Gambit"
+      },
+      {
+        "key": "r1bqkbnr/pppppppp/2n5/8/3P4/8/PPP1PPPP/RNBQKBNR w KQkq -",
+        "fen": "r1bqkbnr/pppppppp/2n5/8/3P4/8/PPP1PPPP/RNBQKBNR w KQkq - 1 2",
+        "moves": [
+          {
+            "move": "e2e3",
+            "san": "e3",
+            "frequency": 2,
+            "winRate": 0,
+            "performance": 4,
+            "averageOpponentRating": 489.5,
+            "followupMoves": [],
+            "notes": []
+          }
+        ],
+        "totalGames": 3,
+        "successRate": 0,
+        "popularity": 6.382978723404255,
+        "eco": "https://www.chess.com/openings/Queens-Gambit-Declined-Chigorin-Defense-3.Nf3"
+      }
+    ],
+    "asBlack": []
+  }
+}

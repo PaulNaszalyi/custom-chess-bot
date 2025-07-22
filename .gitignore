@@ -1,0 +1,27 @@
+# Environment variables
+.env
+
+# Logs
+*.log
+npm-debug.log*
+
+# Node modules
+node_modules/
+
+# TypeScript
+*.tsbuildinfo
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Bot data (optional - comment out if you want to track learning data)
+data/adaptive-learning.json
+
+# Temporary files
+*.tmp
+*.temp
