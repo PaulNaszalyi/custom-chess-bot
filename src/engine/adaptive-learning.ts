@@ -2,7 +2,7 @@ import { UnifiedGameData } from '../data/combined-extractor';
 import { GameSession } from '../lichess/bot-controller';
 import { ChessPositionManager } from './chess-position-manager';
 import { AdvancedPattern } from '../analysis/pattern-recognizer';
-import fs from 'fs';
+import * as fs from 'fs';
 
 export interface LearningData {
     gameId: string;

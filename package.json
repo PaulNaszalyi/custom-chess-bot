@@ -4,12 +4,9 @@
   "main": "index.js",
   "scripts": {
     "start": "npx ts-node index.ts",
-    "phase2": "npx ts-node phase2-demo.ts",
-    "phase3": "npx ts-node phase3-demo.ts",
-    "deploy": "npx ts-node deploy-bot.ts",
-    "bot-status": "npx ts-node deploy-bot.ts status",
-    "test-deployment": "npx ts-node test-deployment.ts",
-    "simple-bot": "npx ts-node simple-bot.ts"
+    "bot": "npx ts-node bot.ts",
+    "check-setup": "npx ts-node scripts/simple-deploy.ts",
+    "demo": "npx ts-node demos/phase3-demo.ts"
   },
   "keywords": [],
   "author": "",
