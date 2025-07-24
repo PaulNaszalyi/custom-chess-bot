@@ -16,7 +16,8 @@
     "axios": "^1.10.0",
     "chess.js": "^1.0.0-beta.8",
     "dotenv": "^16.6.1",
-    "pgn-parser": "^2.2.1"
+    "pgn-parser": "^2.2.1",
+    "stockfish.js": "^10.0.2"
   },
   "devDependencies": {
     "@types/dotenv": "^6.1.1",

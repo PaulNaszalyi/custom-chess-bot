@@ -1,6 +1,9 @@
 import * as dotenv from 'dotenv';
 import axios from 'axios';
 import { Chess } from 'chess.js';
+// Temporarily disable Stockfish integration until library issues resolved
+// import { StockfishEngine, StockfishMove } from './src/engine/stockfish-engine';
+// import { PaulNasStyleFilter } from './src/engine/paul-nas-style-filter';
 
 // Load environment variables
 dotenv.config();
@@ -10,11 +13,17 @@ class SimpleWorkingBot {
     private botUsername: string;
     private activeGames: Map<string, { chess: Chess; ourColor: 'white' | 'black' }> = new Map();
     private openingBook: any;
+    // Temporarily disable engines
+    // private stockfishEngine: StockfishEngine;
+    // private styleFilter: PaulNasStyleFilter;
 
     constructor(apiToken: string, botUsername: string) {
         this.apiToken = apiToken;
         this.botUsername = botUsername;
         this.loadOpeningBook();
+        // Temporarily disable engines
+        // this.stockfishEngine = new StockfishEngine();
+        // this.styleFilter = new PaulNasStyleFilter();
     }
 
     private loadOpeningBook(): void {
@@ -92,6 +101,12 @@ class SimpleWorkingBot {
         }
         
         return null;
+    }
+
+    private async getHybridMove(chess: Chess, legalMoves: any[], moveCount: number): Promise<any> {
+        // Temporarily disabled Stockfish integration - fall back to tactical analysis
+        console.log('🎯 Using Paul_Nas tactical analysis (Stockfish temporarily disabled)...');
+        return this.selectBestMove(legalMoves, chess, moveCount);
     }
 
     private async makeApiRequest(endpoint: string, method: 'GET' | 'POST' = 'GET', data?: any): Promise<any> {
@@ -346,30 +361,31 @@ class SimpleWorkingBot {
     }
 
     private async makeMove(gameId: string, chess: Chess): Promise<void> {
-        try {
-            const legalMoves = chess.moves({ verbose: true });
-            
-            if (legalMoves.length === 0) {
-                console.log('🏁 No legal moves');
-                return;
-            }
+        const legalMoves = chess.moves({ verbose: true });
+        
+        if (legalMoves.length === 0) {
+            console.log('🏁 No legal moves');
+            return;
+        }
 
+        try {
             let selectedMove;
             const moveCount = chess.history().length;
             
-            // Use Paul_Nas's actual opening repertoire from 68 games
+            // HYBRID APPROACH: Opening book + Stockfish + Style filtering
             const bookMove = this.getOpeningMove(chess, moveCount, gameId);
             if (bookMove) {
+                // Phase 1: Use Paul_Nas opening book (moves 1-12)
                 selectedMove = legalMoves.find(move => move.san === bookMove);
                 if (selectedMove) {
                     console.log(`📚 Playing Paul_Nas book move: ${bookMove}`);
                 } else {
-                    console.log(`⚠️ Book move ${bookMove} not legal, falling back`);
-                    selectedMove = this.selectBestMove(legalMoves, chess, moveCount);
+                    console.log(`⚠️ Book move ${bookMove} not legal, using hybrid engine`);
+                    selectedMove = await this.getHybridMove(chess, legalMoves, moveCount);
                 }
             } else {
-                // After opening phase, use tactical play
-                selectedMove = this.selectBestMove(legalMoves, chess, moveCount);
+                // Phase 2: Stockfish analysis + Paul_Nas style filtering
+                selectedMove = await this.getHybridMove(chess, legalMoves, moveCount);
             }
 
             const moveString = `${selectedMove.from}${selectedMove.to}${selectedMove.promotion || ''}`;
@@ -380,6 +396,15 @@ class SimpleWorkingBot {
 
         } catch (error) {
             console.error(`❌ Failed to make move:`, error);
+            // Fallback to simple move selection on engine failure
+            try {
+                const fallbackMove = legalMoves[Math.floor(Math.random() * legalMoves.length)];
+                const moveString = `${fallbackMove.from}${fallbackMove.to}${fallbackMove.promotion || ''}`;
+                console.log(`🔄 Emergency fallback move: ${moveString}`);
+                await this.makeApiRequest(`/bot/game/${gameId}/move/${moveString}`, 'POST');
+            } catch (fallbackError) {
+                console.error('❌ Even fallback move failed:', fallbackError);
+            }
         }
     }
 
@@ -544,6 +569,15 @@ class SimpleWorkingBot {
         console.log('👀 Ready for next challenge...');
         console.log('');
     }
+
+    // Cleanup method for graceful shutdown
+    cleanup(): void {
+        console.log('🧹 Cleaning up engines...');
+        // Stockfish temporarily disabled
+        // if (this.stockfishEngine) {
+        //     this.stockfishEngine.quit();
+        // }
+    }
 }
 
 async function main(): Promise<void> {
@@ -558,12 +592,14 @@ async function main(): Promise<void> {
     const bot = new SimpleWorkingBot(apiToken, botUsername);
     
     process.on('SIGINT', () => {
-        console.log('\n🛑 Bot stopped');
+        console.log('\n🛑 Bot stopping...');
+        bot.cleanup();
         process.exit(0);
     });
     
     await bot.startBot();
 }
+
 
 if (require.main === module) {
     main();
