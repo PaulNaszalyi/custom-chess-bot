@@ -1,6 +1,6 @@
 {
   "username": "Paul_Nas",
-  "lastUpdated": 1753279496545,
+  "lastUpdated": 1753352147307,
   "profile": {
     "player_id": 461881016,
     "@id": "https://api.chess.com/pub/player/paul_nas",
@@ -8,7 +8,7 @@
     "username": "paul_nas",
     "followers": 0,
     "country": "https://api.chess.com/pub/country/FR",
-    "last_online": 1753193516,
+    "last_online": 1753308692,
     "joined": 1750718416,
     "status": "basic",
     "is_streamer": false,
@@ -19,17 +19,17 @@
   "stats": {
     "chess_rapid": {
       "last": {
-        "rating": 477,
-        "date": 1753193380,
-        "rd": 55
+        "rating": 486,
+        "date": 1753308414,
+        "rd": 54
       },
       "best": {
         "rating": 585,
         "date": 1750719412,
-        "game": "https://www.chess.com/game/live/140937041752"
+        "game": "https://www.chess.com/game/live/141034582484"
       },
       "record": {
-        "win": 26,
+        "win": 27,
         "loss": 18,
         "draw": 2
       }

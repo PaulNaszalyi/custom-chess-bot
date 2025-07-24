@@ -22,10 +22,10 @@
               "prov": true
             },
             "rapid": {
-              "games": 15,
-              "rating": 1548,
-              "rd": 171,
-              "prog": 22,
+              "games": 16,
+              "rating": 1552,
+              "rd": 170,
+              "prog": 26,
               "prov": true
             },
             "classical": {
@@ -48,22 +48,22 @@
           "profile": {
             "flag": "FR"
           },
-          "seenAt": 1753278947084,
+          "seenAt": 1753351540241,
           "playTime": {
-            "total": 6715,
+            "total": 6835,
             "tv": 0
           },
           "url": "https://lichess.org/@/Paul_Nas",
           "count": {
-            "all": 20,
-            "rated": 17,
+            "all": 21,
+            "rated": 18,
             "ai": 0,
             "draw": 2,
             "drawH": 2,
             "loss": 3,
             "lossH": 3,
-            "win": 15,
-            "winH": 15,
+            "win": 16,
+            "winH": 16,
             "bookmark": 0,
             "playing": 0,
             "import": 0,
@@ -79,7 +79,7 @@
           "username": "paul_nas",
           "followers": 0,
           "country": "https://api.chess.com/pub/country/FR",
-          "last_online": 1753193516,
+          "last_online": 1753308692,
           "joined": 1750718416,
           "status": "basic",
           "is_streamer": false,
@@ -90,17 +90,17 @@
         "stats": {
           "chess_rapid": {
             "last": {
-              "rating": 477,
-              "date": 1753193380,
-              "rd": 55
+              "rating": 486,
+              "date": 1753308414,
+              "rd": 54
             },
             "best": {
               "rating": 585,
               "date": 1750719412,
-              "game": "https://www.chess.com/game/live/140937041752"
+              "game": "https://www.chess.com/game/live/141034582484"
             },
             "record": {
-              "win": 26,
+              "win": 27,
               "loss": 18,
               "draw": 2
             }
@@ -121,12 +121,12 @@
       }
     },
     "combinedStats": {
-      "totalGames": 66,
-      "winRate": 62.121212121212125,
-      "averageRating": 739.7121212121212,
+      "totalGames": 68,
+      "winRate": 63.23529411764706,
+      "averageRating": 747.8676470588235,
       "ratingRange": {
         "min": 238,
-        "max": 1543
+        "max": 1548
       },
       "favoriteTimeControls": [
         "600",
@@ -136,68 +136,219 @@
       "topOpenings": [
         {
           "name": "Queen's Pawn Game",
-          "frequency": 12.121212121212121,
+          "frequency": 11.76470588235294,
           "winRate": 87.5,
           "source": "lichess"
         },
         {
           "name": "Queen's Pawn Game: Accelerated London System, Steinitz Countergambit",
-          "frequency": 3.0303030303030303,
+          "frequency": 2.941176470588235,
           "winRate": 50,
           "source": "lichess"
         },
         {
           "name": "Queen's Pawn Game: Modern Defense",
-          "frequency": 3.0303030303030303,
+          "frequency": 2.941176470588235,
           "winRate": 100,
           "source": "lichess"
         },
         {
           "name": "French Defense",
-          "frequency": 3.0303030303030303,
+          "frequency": 2.941176470588235,
+          "winRate": 100,
+          "source": "lichess"
+        },
+        {
+          "name": "Australian Defense",
+          "frequency": 1.4705882352941175,
           "winRate": 100,
           "source": "lichess"
         },
         {
           "name": "Mikenas Defense",
-          "frequency": 1.5151515151515151,
+          "frequency": 1.4705882352941175,
           "winRate": 100,
           "source": "lichess"
         },
         {
           "name": "Queen's Pawn Game: Zurich Gambit",
-          "frequency": 1.5151515151515151,
+          "frequency": 1.4705882352941175,
           "winRate": 100,
           "source": "lichess"
         },
         {
           "name": "Horwitz Defense",
-          "frequency": 1.5151515151515151,
+          "frequency": 1.4705882352941175,
           "winRate": 0,
           "source": "lichess"
         },
         {
           "name": "Indian Defense",
-          "frequency": 1.5151515151515151,
+          "frequency": 1.4705882352941175,
           "winRate": 0,
           "source": "lichess"
         },
         {
           "name": "French Defense: Exchange Variation",
-          "frequency": 1.5151515151515151,
+          "frequency": 1.4705882352941175,
           "winRate": 100,
-          "source": "lichess"
-        },
-        {
-          "name": "Indian Defense: West Indian Defense",
-          "frequency": 1.5151515151515151,
-          "winRate": 0,
           "source": "lichess"
         }
       ]
     }
   },
   "games": [
+    {
+      "source": "chess.com",
+      "gameId": "26599b12-680f-11f0-a36a-7cbd1601000f",
+      "url": "https://www.chess.com/game/live/141034582484",
+      "pgn": "[Event \"Live Chess\"]\n[Site \"Chess.com\"]\n[Date \"2025.07.23\"]\n[Round \"-\"]\n[White \"Paul_Nas\"]\n[Black \"ahmed-emad-hmeed\"]\n[Result \"1-0\"]\n[CurrentPosition \"3R2k1/2p3p1/6P1/8/3P1b1p/3K3P/8/8 b - - 0 37\"]\n[Timezone \"UTC\"]\n[ECO \"C03\"]\n[ECOUrl \"https://www.chess.com/openings/French-Defense-Tarrasch-Variation\"]\n[UTCDate \"2025.07.23\"]\n[UTCTime \"21:51:12\"]\n[WhiteElo \"486\"]\n[BlackElo \"487\"]\n[TimeControl \"600\"]\n[Termination \"Paul_Nas won by checkmate\"]\n[StartTime \"21:51:12\"]\n[EndDate \"2025.07.23\"]\n[EndTime \"22:06:54\"]\n[Link \"https://www.chess.com/game/live/141034582484\"]\n\n1. d4 {[%clk 0:09:57.7]} 1... e6 {[%clk 0:09:58.1]} 2. e4 {[%clk 0:09:51]} 2... d5 {[%clk 0:09:52.4]} 3. Nd2 {[%clk 0:09:44.4]} 3... f5 {[%clk 0:09:47.8]} 4. f3 {[%clk 0:09:35]} 4... Nc6 {[%clk 0:09:39]} 5. Bb5 {[%clk 0:09:16.7]} 5... Nf6 {[%clk 0:09:20.6]} 6. Ne2 {[%clk 0:08:56.2]} 6... fxe4 {[%clk 0:09:18.7]} 7. fxe4 {[%clk 0:08:54]} 7... dxe4 {[%clk 0:09:08.4]} 8. Rf1 {[%clk 0:08:43.5]} 8... a6 {[%clk 0:08:47.7]} 9. Ba4 {[%clk 0:08:39.4]} 9... b5 {[%clk 0:08:39.3]} 10. Rf4 {[%clk 0:07:51.7]} 10... bxa4 {[%clk 0:08:27.4]} 11. Nxe4 {[%clk 0:07:48.7]} 11... e5 {[%clk 0:08:19.3]} 12. dxe5 {[%clk 0:07:36.3]} 12... Nxe5 {[%clk 0:08:04.1]} 13. Bd2 {[%clk 0:06:54.7]} 13... Bg4 {[%clk 0:07:45]} 14. h3 {[%clk 0:06:35.7]} 14... Bxe2 {[%clk 0:07:42]} 15. Qxe2 {[%clk 0:06:32.1]} 15... Bd6 {[%clk 0:07:23.7]} 16. O-O-O {[%clk 0:06:26.6]} 16... O-O {[%clk 0:07:19.4]} 17. a3 {[%clk 0:06:11.4]} 17... Nxe4 {[%clk 0:07:06.3]} 18. Qxe4 {[%clk 0:06:05.8]} 18... Rxf4 {[%clk 0:06:51.4]} 19. Qxf4 {[%clk 0:06:00.4]} 19... Qe8 {[%clk 0:06:40.1]} 20. Rf1 {[%clk 0:05:19.7]} 20... Nc6 {[%clk 0:06:18.8]} 21. Qe3 {[%clk 0:04:56.2]} 21... Qxe3 {[%clk 0:06:15.7]} 22. Bxe3 {[%clk 0:04:54.7]} 22... Rb8 {[%clk 0:06:04.5]} 23. g4 {[%clk 0:04:47.9]} 23... Ne5 {[%clk 0:05:58.4]} 24. g5 {[%clk 0:04:38]} 24... Nc4 {[%clk 0:05:41.7]} 25. Bd4 {[%clk 0:04:13.1]} 25... h5 {[%clk 0:05:08]} 26. g6 {[%clk 0:04:05.6]} 26... Rf8 {[%clk 0:04:58.6]} 27. Re1 {[%clk 0:03:25]} 27... Bf4+ {[%clk 0:04:45.7]} 28. Kd1 {[%clk 0:03:15.7]} 28... Rd8 {[%clk 0:04:14.7]} 29. c3 {[%clk 0:03:08.5]} 29... Nxb2+ {[%clk 0:04:04.5]} 30. Kc2 {[%clk 0:02:55.8]} 30... Nc4 {[%clk 0:03:38.3]} 31. Kd3 {[%clk 0:02:49.2]} 31... Nxa3 {[%clk 0:03:22.2]} 32. Ra1 {[%clk 0:02:38.5]} 32... Nb5 {[%clk 0:02:55.3]} 33. Rxa4 {[%clk 0:02:36.2]} 33... Nxd4 {[%clk 0:02:54]} 34. cxd4 {[%clk 0:02:33.7]} 34... h4 {[%clk 0:02:35.7]} 35. Rxa6 {[%clk 0:02:27.4]} 35... Rd6 {[%clk 0:02:25.2]} 36. Ra8+ {[%clk 0:02:14.3]} 36... Rd8 {[%clk 0:02:22.3]} 37. Rxd8# {[%clk 0:02:12.6]} 1-0\n",
+      "moves": [
+        "d4",
+        "e6",
+        "e4",
+        "d5",
+        "Nd2",
+        "f5",
+        "f3",
+        "Nc6",
+        "Bb5",
+        "Nf6",
+        "Ne2",
+        "fxe4",
+        "fxe4",
+        "dxe4",
+        "Rf1",
+        "a6",
+        "Ba4",
+        "b5",
+        "Rf4",
+        "bxa4",
+        "Nxe4",
+        "e5",
+        "dxe5",
+        "Nxe5",
+        "Bd2",
+        "Bg4",
+        "h3",
+        "Bxe2",
+        "Qxe2",
+        "Bd6",
+        "O-O-O",
+        "O-O",
+        "a3",
+        "Nxe4",
+        "Qxe4",
+        "Rxf4",
+        "Qxf4",
+        "Qe8",
+        "Rf1",
+        "Nc6",
+        "Qe3",
+        "Qxe3",
+        "Bxe3",
+        "Rb8",
+        "g4",
+        "Ne5",
+        "g5",
+        "Nc4",
+        "Bd4",
+        "h5",
+        "g6",
+        "Rf8",
+        "Re1",
+        "Bf4+",
+        "Kd1",
+        "Rd8",
+        "c3",
+        "Nxb2+",
+        "Kc2",
+        "Nc4",
+        "Kd3",
+        "Nxa3",
+        "Ra1",
+        "Nb5",
+        "Rxa4",
+        "Nxd4",
+        "cxd4",
+        "h4",
+        "Rxa6",
+        "Rd6",
+        "Ra8+",
+        "Rd8",
+        "Rxd8#"
+      ],
+      "moveCount": 73,
+      "playerColor": "white",
+      "playerRating": 486,
+      "opponentRating": 487,
+      "ratingDifference": -1,
+      "gameResult": "win",
+      "timeControl": "600",
+      "timeClass": "rapid",
+      "rated": true,
+      "startTime": 1753308414000,
+      "endTime": 1753308414000,
+      "opening": {
+        "eco": "https://www.chess.com/openings/French-Defense-Tarrasch-Variation"
+      }
+    },
+    {
+      "source": "lichess",
+      "gameId": "oszoe1y3",
+      "url": "https://lichess.org/oszoe1y3",
+      "pgn": "[Event \"rated rapid game\"]\n[Site \"https://lichess.org/oszoe1y3\"]\n[Date \"2025.07.23\"]\n[White \"Paul_Nas\"]\n[Black \"Paul_Nas_Bot\"]\n[Result \"1-0\"]\n[GameId \"oszoe1y3\"]\n[UTCDate \"2025.07.23\"]\n[UTCTime \"14:08:19\"]\n[WhiteElo \"1548\"]\n[BlackElo \"1008\"]\n[WhiteRatingDiff \"+4\"]\n[BlackRatingDiff \"-8\"]\n[BlackTitle \"BOT\"]\n[Variant \"Standard\"]\n[TimeControl \"600+0\"]\n[ECO \"A40\"]\n[Opening \"Australian Defense\"]\n[Termination \"Normal\"]\n\n1. d4 { [%clk 0:10:00] } 1... Na6 { [%clk 0:10:00] } 2. e3 { [%clk 0:09:57] } 2... Nf6 { [%clk 0:09:59] } 3. c4 { [%clk 0:09:53] } 3... Nb4 { [%clk 0:09:58] } 4. Nc3 { [%clk 0:09:45] } 4... Nfd5 { [%clk 0:09:57] } 5. cxd5 { [%clk 0:09:38] } 5... Nc2+ { [%clk 0:09:56] } 6. Qxc2 { [%clk 0:09:35] } 6... e5 { [%clk 0:09:55] } 7. dxe5 { [%clk 0:09:33] } 7... Bc5 { [%clk 0:09:53] } 8. Be2 { [%clk 0:09:18] } 8... a6 { [%clk 0:09:52] } 9. Nf3 { [%clk 0:09:17] } 9... f6 { [%clk 0:09:51] } 10. O-O { [%clk 0:09:11] } 10... fxe5 { [%clk 0:09:50] } 11. Nxe5 { [%clk 0:09:09] } 11... c6 { [%clk 0:09:49] } 12. Bc4 { [%clk 0:08:53] } 12... cxd5 { [%clk 0:09:48] } 13. Bxd5 { [%clk 0:08:53] } 13... a5 { [%clk 0:09:47] } 14. Rd1 { [%clk 0:08:42] } 14... h6 { [%clk 0:09:46] } 15. Qg6+ { [%clk 0:08:29] } 15... Kf8 { [%clk 0:09:45] } 16. Qf7# { [%clk 0:08:22] } 1-0\n\n\n",
+      "moves": [
+        "d4",
+        "Na6",
+        "e3",
+        "Nf6",
+        "c4",
+        "Nb4",
+        "Nc3",
+        "Nfd5",
+        "cxd5",
+        "Nc2+",
+        "Qxc2",
+        "e5",
+        "dxe5",
+        "Bc5",
+        "Be2",
+        "a6",
+        "Nf3",
+        "f6",
+        "O-O",
+        "fxe5",
+        "Nxe5",
+        "c6",
+        "Bc4",
+        "cxd5",
+        "Bxd5",
+        "a5",
+        "Rd1",
+        "h6",
+        "Qg6+",
+        "Kf8",
+        "Qf7#"
+      ],
+      "moveCount": 31,
+      "playerColor": "white",
+      "playerRating": 1548,
+      "opponentRating": 1008,
+      "ratingDifference": 540,
+      "gameResult": "win",
+      "timeControl": "600+0",
+      "variant": "standard",
+      "rated": true,
+      "startTime": 1753279699685,
+      "endTime": 1753279817078,
+      "gameDurationMs": 117393,
+      "opening": {
+        "eco": "A40",
+        "name": "Australian Defense",
+        "ply": 2
+      }
+    },
     {
       "source": "lichess",
       "gameId": "6LdALczL",

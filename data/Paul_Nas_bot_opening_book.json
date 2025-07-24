@@ -1,0 +1,75 @@
+{
+  "asWhite": {
+    "preferredOpenings": [
+      "1.d4",
+      "1.d4 e6 2.e4"
+    ],
+    "moveTree": {
+      "start": [
+        {
+          "move": "d4",
+          "frequency": 2,
+          "winRate": 100,
+          "averageRating": 377,
+          "games": 2
+        }
+      ],
+      "1.d4": [
+        {
+          "move": "e4",
+          "frequency": 1,
+          "winRate": 100,
+          "averageRating": 486,
+          "games": 1
+        }
+      ]
+    },
+    "recommendations": {
+      "mostPlayed": "1.d4",
+      "bestWinRate": "1.d4",
+      "safestChoice": "1.d4"
+    }
+  },
+  "asBlack": {
+    "responses": {
+      "1.d4": [
+        {
+          "move": "d5",
+          "frequency": 11,
+          "winRate": 63.63636363636363,
+          "averageRating": 1543,
+          "games": 11
+        },
+        {
+          "move": "e6",
+          "frequency": 3,
+          "winRate": 33.333333333333336,
+          "averageRating": 1416,
+          "games": 3
+        }
+      ],
+      "1.e4": [
+        {
+          "move": "e6",
+          "frequency": 13,
+          "winRate": 84.61538461538461,
+          "averageRating": 1500,
+          "games": 13
+        }
+      ]
+    },
+    "recommendations": {
+      "againstD4": "1...d5",
+      "againstE4": "1...e6",
+      "universal": "1...d5"
+    }
+  },
+  "statistics": {
+    "totalGames": 68,
+    "gamesAsWhite": 34,
+    "gamesAsBlack": 34,
+    "overallWinRate": 63.23529411764706,
+    "whiteWinRate": 55.88235294117647,
+    "blackWinRate": 70.58823529411765
+  }
+}

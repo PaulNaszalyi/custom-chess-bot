@@ -18,8 +18,8 @@ async function main() {
         
         // Fetch data from both Chess.com and Lichess
         await combinedExtractor.fetchAllData({
-            chessComArchives: 3,    // Limit Chess.com to last 3 archives for demo
-            lichessMaxGames: 50     // Limit Lichess to last 50 games for demo
+            chessComArchives: 0,    // 0 = get ALL archives (no limit)
+            lichessMaxGames: 200    // Increase to get more Lichess games
         });
         
         // Print combined summary
